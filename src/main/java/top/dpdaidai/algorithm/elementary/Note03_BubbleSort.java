@@ -8,11 +8,11 @@ import java.util.TreeMap;
  * 测试数据 :
  * 数组长度 5000
  * 数大小 0-5000
- * 运行次数 20000
+ * 运行次数 2000
  * <p>
  * 结论数据 :
  * 运行机器 : MBP2015 15寸
- * 排序总耗时 : 16848 ms
+ * 排序总耗时 : 32738 ms
  * 平均排序耗时 : 16 ms
  *
  * @Author chenpantao
@@ -22,7 +22,7 @@ import java.util.TreeMap;
 public class Note03_BubbleSort {
 
     public static void main(String[] args) {
-        int testTime = 1000;
+        int testTime = 2000;
         int maxSize = 5000;
         int maxValue = 5000;
 
