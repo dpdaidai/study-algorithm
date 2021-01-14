@@ -15,8 +15,12 @@ public class Test {
 //        Note03_BubbleSort note03_bubbleSort = new Note03_BubbleSort();
 //        Test.sortTest(note03_bubbleSort);
 
-        Note04_SelectionSort note04_selectionSort = new Note04_SelectionSort();
-        Test.sortTest(note04_selectionSort);
+//        Note04_SelectionSort note04_selectionSort = new Note04_SelectionSort();
+//        Test.sortTest(note04_selectionSort);
+
+        Note05_InsertionSort note05_insertionSort = new Note05_InsertionSort();
+        Test.sortTest(note05_insertionSort);
+
     }
 
 
@@ -39,7 +43,7 @@ public class Test {
             ArrayUtil.comparator(copyArray);
 
             //累积每次排序耗时
-//            System.out.println("耗时 : " + (end - start));
+            System.out.println("耗时 : " + (end - start));
             timeConsuming += (end - start);
 
             //判断排序是否正确
