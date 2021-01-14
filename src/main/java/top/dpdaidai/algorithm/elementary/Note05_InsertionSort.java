@@ -1,7 +1,7 @@
 package top.dpdaidai.algorithm.elementary;
 
 /**
- * 选择排序
+ * 插入排序
  * 时间复杂度 : O(n²) , 额外空间复杂度 O(1)
  * 测试数据 :
  * 数组长度 5000
