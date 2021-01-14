@@ -89,7 +89,7 @@ public class ArrayUtil {
         int[] array = new int[length];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (maxValue * Math.random());
+            array[i] = (int) ((maxValue + 1) * Math.random());  // Math.random() : 左闭右开 , 包含0, 不包含1 . [0,1)
         }
 
         return array;
