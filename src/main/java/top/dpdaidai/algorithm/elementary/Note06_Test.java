@@ -51,7 +51,6 @@ public class Note06_Test {
             int[] copyArray = ArrayUtil.copyArray(array);
 //            ArrayUtil.printArray(array);
 
-            //冒牌排序
             long start = System.currentTimeMillis();
             sortService.sort(array);
 //            ArrayUtil.printArray(array);
