@@ -2,11 +2,11 @@ package top.dpdaidai.algorithm.elementary;
 
 /**
  * 归并排序
- *
+ * <p>
  * 时间复杂度  T(n) = 2T(n/2) + O(n) = O(N * logN)
  * 远高于 O(n²)
  * 额外空间复杂度来源于辅助数组 helpArray , 大小为 O(n)
- *
+ * <p>
  * 测试数据 :
  * 数组长度 10000
  * 数大小 -5000 - +5000
@@ -16,7 +16,6 @@ package top.dpdaidai.algorithm.elementary;
  * 运行机器 : MBP2015 15寸
  * 排序总耗时 : 1200 ms
  * 平均排序耗时 : 1 ms
- *
  *
  * @Author chenpantao
  * @Date 1/16/21 10:04 AM
@@ -42,7 +41,9 @@ public class Note09_MergeSort implements SortService {
 
         if (left == right) return;
 
-        int middle = (right + left) / 2;
+//        int middle = (left + right) / 2;         // right + left 有可能导致溢出
+//        int middle = left + (right - left) / 2;    // 防止溢出
+        int middle = left + ((right - left) >> 1);
 
         //1  使左半数组有序
         mergeSort(array, left, middle);               // T(n/2)
@@ -52,7 +53,7 @@ public class Note09_MergeSort implements SortService {
         merge(array, left, middle, right);            // O(n)
 
 
-}
+    }
 
 
     //一个数组内 , left - middle 有序, middle - right 有序 , 实现left - right之间的排序
