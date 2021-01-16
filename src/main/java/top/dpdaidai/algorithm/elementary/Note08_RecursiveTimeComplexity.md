@@ -28,11 +28,15 @@ a=2, b=2, d=0
 
 3.  利用数学方法对T(n)通式求和
 
-```
-1) log(b,a) > d -> 复杂度为O(N^log(b,a)) 
-2) log(b,a) = d -> 复杂度为O(N^d * logN) 
-3) log(b,a) < d -> 复杂度为O(N^d)
-```
-Note07 中的例子, log(b,a) = 1 , d = 0 . log(b,a) > d 适用于条件1  
-那么T(n) = O(n)
+    ```
+    1) log(b,a) > d -> 复杂度为O(N^log(b,a)) 
+    2) log(b,a) = d -> 复杂度为O(N^d * logN) 
+    3) log(b,a) < d -> 复杂度为O(N^d)
+    ```
+
+    +   Note07 中的例子, log(b,a) = 1 , d = 0 . log(b,a) > d 适用于条件1  
+    那么T(n) = O(n)
+    
+    +   当 T(n) = 2T(n/2) + O(n) 时 , log(2,2) = 1 , d=1 . 适用于条件2
+    那么T(n) = O(N * logN)
 

@@ -13,7 +13,7 @@ package top.dpdaidai.algorithm.elementary;
  * @Date 1/15/21 10:44 PM
  * @Version 1.0
  */
-public class Note07_Recursive {
+public class Note07_RecursiveDemo {
 
     public static final int testTime = 2000;
     public static final int maxSize = 10000;
@@ -23,9 +23,9 @@ public class Note07_Recursive {
         long recursiveTimeConsuming = 0;
         long cycleTimeConsuming = 0;
 
-        for (int i = 0; i < Note07_Recursive.testTime; i++) {
+        for (int i = 0; i < Note07_RecursiveDemo.testTime; i++) {
 
-            int[] array = ArrayUtil.generateSpecifyLengthRandomArray(Note07_Recursive.maxSize, Note07_Recursive.maxValue);
+            int[] array = ArrayUtil.generateSpecifyLengthRandomArray(Note07_RecursiveDemo.maxSize, Note07_RecursiveDemo.maxValue);
 
             long start = System.currentTimeMillis();
             int max = getMax(array, 0, array.length - 1);
@@ -45,11 +45,11 @@ public class Note07_Recursive {
             }
         }
 
-        System.out.println(Note07_Recursive.testTime + " 次 , 递归耗时 : " + recursiveTimeConsuming);
-        System.out.println("递归平均耗时 : " + recursiveTimeConsuming / Note07_Recursive.testTime);
+        System.out.println(Note07_RecursiveDemo.testTime + " 次 , 递归耗时 : " + recursiveTimeConsuming);
+        System.out.println("递归平均耗时 : " + recursiveTimeConsuming / Note07_RecursiveDemo.testTime);
 
-        System.out.println(Note07_Recursive.testTime + " 次 , 遍历耗时 : " + cycleTimeConsuming);
-        System.out.println("遍历平均耗时 : " + cycleTimeConsuming / Note07_Recursive.testTime);
+        System.out.println(Note07_RecursiveDemo.testTime + " 次 , 遍历耗时 : " + cycleTimeConsuming);
+        System.out.println("遍历平均耗时 : " + cycleTimeConsuming / Note07_RecursiveDemo.testTime);
 
 //        2000 次 , 递归耗时 : 79
 //        递归平均耗时 : 0

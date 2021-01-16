@@ -16,7 +16,7 @@ public class ArrayUtil {
     }
 
     //数组按升序排列
-    public static void comparator(int[] array) {
+    public static void sort(int[] array) {
         Arrays.sort(array);
     }
 
@@ -76,20 +76,20 @@ public class ArrayUtil {
     // 生成随机长度 随机数组
     public static int[] generateRandomArray(int maxSize, int maxValue) {
         int[] array = new int[(int) ((maxSize + 1) * Math.random())];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = (int) ((maxValue + 1) * Math.random() - maxValue * Math.random());
-        }
-
-        return array;
+        return generateRandomArray(maxValue, array);
 
     }
 
     // 生成指定长度随机数组
     public static int[] generateSpecifyLengthRandomArray(int length, int maxValue) {
         int[] array = new int[length];
+        return generateRandomArray(maxValue, array);
+    }
 
+    private static int[] generateRandomArray(int maxValue, int[] array) {
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) ((maxValue + 1) * Math.random());  // Math.random() : 左闭右开 , 包含0, 不包含1 . [0,1)
+//            array[i] = (int) ((maxValue + 1) * Math.random());  // Math.random() : 左闭右开 , 包含0, 不包含1 . [0,1)
+            array[i] = (int) ((maxValue + 1) * Math.random() - maxValue * Math.random());
         }
 
         return array;
