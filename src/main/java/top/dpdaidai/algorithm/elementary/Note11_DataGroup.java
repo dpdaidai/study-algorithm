@@ -2,7 +2,7 @@ package top.dpdaidai.algorithm.elementary;
 
 /**
  * 荷兰国旗问题
- * 给定一个数组arr，和一个数num，
+ * 给定一个数组arr，和一个数num，将数据分为 小于num, 等于num, 大于num三组
  * 请把小于num的数放在数组的 左边，
  * 等于num的数放在数组的中间，
  * 大于num的数放在数组的 右边。
@@ -12,7 +12,7 @@ package top.dpdaidai.algorithm.elementary;
  * @Date 1/18/21 4:32 PM
  * @Version 1.0
  */
-public class Note11_NetherlandsFlag {
+public class Note11_DataGroup {
 
     public static void main(String[] args) {
 
@@ -85,15 +85,11 @@ public class Note11_NetherlandsFlag {
                 current++;
             } else if (array[current] < num) {
                 ++left;
-                int swap = array[current];
-                array[current] = array[left];
-                array[left] = swap;
+                swap(array, current, left);
                 current++;
             } else if (array[current] > num) {
                 --right;
-                int swap = array[current];
-                array[current] = array[right];
-                array[right] = swap;
+                swap(array, current, right);
             }
 
             //            ArrayUtil.printArray(array);

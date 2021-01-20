@@ -15,7 +15,7 @@ package top.dpdaidai.algorithm.elementary;
  * @Date 1/14/21 12:08 PM
  * @Version 1.0
  */
-public class Note06_Test {
+public class Note00_Test {
 
     public static final int testTime = 2000;
     public static final int maxSize = 5000;
@@ -23,20 +23,23 @@ public class Note06_Test {
 
     public static void main(String[] args) {
 
-        Note06_StandardSort note06_standardSort = new Note06_StandardSort();
-        Note06_Test.sortTest(note06_standardSort);
+//        Note06_StandardSort note06_standardSort = new Note06_StandardSort();
+//        Note00_Test.sortTest(note06_standardSort);
 
-        Note03_BubbleSort note03_bubbleSort = new Note03_BubbleSort();
-        Note06_Test.sortTest(note03_bubbleSort);
+//        Note03_BubbleSort note03_bubbleSort = new Note03_BubbleSort();
+//        Note00_Test.sortTest(note03_bubbleSort);
+//
+//        Note04_SelectionSort note04_selectionSort = new Note04_SelectionSort();
+//        Note00_Test.sortTest(note04_selectionSort);
+//
+//        Note05_InsertionSort note05_insertionSort = new Note05_InsertionSort();
+//        Note00_Test.sortTest(note05_insertionSort);
 
-        Note04_SelectionSort note04_selectionSort = new Note04_SelectionSort();
-        Note06_Test.sortTest(note04_selectionSort);
+//        Note09_MergeSort note09_mergeSort = new Note09_MergeSort();
+//        Note00_Test.sortTest(note09_mergeSort);
 
-        Note05_InsertionSort note05_insertionSort = new Note05_InsertionSort();
-        Note06_Test.sortTest(note05_insertionSort);
-
-        Note09_MergeSort note09_mergeSort = new Note09_MergeSort();
-        Note06_Test.sortTest(note09_mergeSort);
+        Note12_QuickSort note12_quickSort = new Note12_QuickSort();
+        Note00_Test.sortTest(note12_quickSort);
 
 
         //1
@@ -53,7 +56,8 @@ public class Note06_Test {
 //        平均耗时 : 13
 //        归并排序2000 次 , 耗时 : 1224
 //        平均耗时 : 0
-
+//        快速排序2000 次 , 耗时 : 837
+//        平均耗时 : 0
 
         //2
 //        public static final int testTime = 1000;
@@ -69,15 +73,17 @@ public class Note06_Test {
 //        平均耗时 : 54
 //        归并排序1000 次 , 耗时 : 1200
 //        平均耗时 : 1
+//        快速排序1000 次 , 耗时 : 962
+//        平均耗时 : 0
     }
 
 
     public static void sortTest(SortService sortService) {
         long timeConsuming = 0;
 
-        for (int i = 0; i < Note06_Test.testTime; i++) {
+        for (int i = 0; i < Note00_Test.testTime; i++) {
             //生成指定长度随机数组
-            int[] array = ArrayUtil.generateSpecifyLengthRandomArray(Note06_Test.maxSize, Note06_Test.maxValue);
+            int[] array = ArrayUtil.generateSpecifyLengthRandomArray(Note00_Test.maxSize, Note00_Test.maxValue);
 
             int[] copyArray = ArrayUtil.copyArray(array);
 //            ArrayUtil.printArray(array);
@@ -102,8 +108,8 @@ public class Note06_Test {
 
         }
 
-        System.out.println(sortService.getName() + Note06_Test.testTime + " 次 , 耗时 : " + timeConsuming);
-        System.out.println("平均耗时 : " + timeConsuming / Note06_Test.testTime);
+        System.out.println(sortService.getName() + Note00_Test.testTime + " 次 , 耗时 : " + timeConsuming);
+        System.out.println("平均耗时 : " + timeConsuming / Note00_Test.testTime);
 
     }
 }
