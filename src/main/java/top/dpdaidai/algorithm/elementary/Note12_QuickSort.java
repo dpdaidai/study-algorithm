@@ -3,6 +3,20 @@ package top.dpdaidai.algorithm.elementary;
 /**
  * 快速排序
  * 利用荷兰国旗问题来改进快速排序
+ * 每次选取数据区间最右边的数 , 来将数据划分为 小于, 等于 , 大于三个区间 .
+ * 再对小于, 大于连个区间同样递归处理
+ * <p>
+ * 时间复杂度类似归并排序 = O(N*logN)
+ * 额外空间复杂度O(logN) :
+ *  在接近二分的过程中, 每次需要记录被选取的num数的index, 一共需要O(logN)个点来记录
+ * <p>
+ * 经典快排的问题 :
+ * 取数据区间最右边的值, 很可能画出来的区间 , 左右两边的规模不相等
+ * 当数据本身为有序时, 每次只能排一次数, 时间复杂度变为O(n²)
+ * <p>
+ * 改进办法 : 随机快排
+ * 每次不是取最右边的数来进行划分 , 二是从数组中随机取一个数, 来进行划分.
+ * 这样复杂度虽然还是有可能出现最差情况, 但这是概率时间 , 和数组本身顺序无关了
  *
  * @Author chenpantao
  * @Date 1/20/21 9:52 AM
@@ -33,6 +47,9 @@ public class Note12_QuickSort implements SortService {
 
         //快排终止条件 : 当分区的数据仅有一个数或者没有数时
         if (left >= right) return;
+
+        //丛数组中选取随机数放到最右边
+        swap(array, left + (int) (Math.random() * (right - left + 1)), right);
 
         int[] indexInt = dataGroup(array, left, right);
         quickSort(array, left, indexInt[0]);
