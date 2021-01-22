@@ -10,9 +10,12 @@ import java.util.Arrays;
 public class ArrayUtil {
 
     public static void swap(int[] array, int i, int j) {
-        array[i] = array[i] ^ array[j];
-        array[j] = array[i] ^ array[j];
-        array[i] = array[i] ^ array[j];
+//        array[i] = array[i] ^ array[j];
+//        array[j] = array[i] ^ array[j];
+//        array[i] = array[i] ^ array[j];
+        int swap = array[i];
+        array[i] = array[j];
+        array[j] = swap;
     }
 
     //数组按升序排列
@@ -96,7 +99,7 @@ public class ArrayUtil {
     }
 
     public static int getMax(int[] array) {
-        if (array == null || array.length == 0){
+        if (array == null || array.length == 0) {
             throw new RuntimeException("数组不能为空");
         }
 

@@ -17,14 +17,14 @@ package top.dpdaidai.algorithm.elementary;
  */
 public class Note00_Test {
 
-    public static final int testTime = 2000;
-    public static final int maxSize = 5000;
-    public static final int maxValue = 5000;
+    public static final int testTime = 1000;
+    public static final int maxSize = 10000;
+    public static final int maxValue = 10000;
 
     public static void main(String[] args) {
 
-//        Note06_StandardSort note06_standardSort = new Note06_StandardSort();
-//        Note00_Test.sortTest(note06_standardSort);
+        Note06_StandardSort note06_standardSort = new Note06_StandardSort();
+        Note00_Test.sortTest(note06_standardSort);
 
 //        Note03_BubbleSort note03_bubbleSort = new Note03_BubbleSort();
 //        Note00_Test.sortTest(note03_bubbleSort);
@@ -40,6 +40,9 @@ public class Note00_Test {
 
         Note12_QuickSort note12_quickSort = new Note12_QuickSort();
         Note00_Test.sortTest(note12_quickSort);
+
+        Note13_HeapSort note13_heapSort = new Note13_HeapSort();
+        Note00_Test.sortTest(note13_heapSort);
 
 
         //1
@@ -58,6 +61,8 @@ public class Note00_Test {
 //        平均耗时 : 0
 //        快速排序2000 次 , 耗时 : 837
 //        平均耗时 : 0
+//        堆排序2000 次 , 耗时 : 515
+//        平均耗时 : 0
 
         //2
 //        public static final int testTime = 1000;
@@ -74,6 +79,8 @@ public class Note00_Test {
 //        归并排序1000 次 , 耗时 : 1200
 //        平均耗时 : 1
 //        快速排序1000 次 , 耗时 : 962
+//        平均耗时 : 0
+//        堆排序1000 次 , 耗时 : 553
 //        平均耗时 : 0
     }
 
