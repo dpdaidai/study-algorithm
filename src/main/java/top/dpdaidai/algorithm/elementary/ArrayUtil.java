@@ -113,4 +113,16 @@ public class ArrayUtil {
         return max;
     }
 
+    /**
+     * 数组自动扩容, 并添加数据到最后一个
+     * @param array
+     * @param value
+     * @return
+     */
+    public static int[] arrayAppend(int[] array, int value) {
+        array = Arrays.copyOf(array, array.length + 1);
+        array[array.length - 1] = value;
+        return array;
+    }
+
 }
