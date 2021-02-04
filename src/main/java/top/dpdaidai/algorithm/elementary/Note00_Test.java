@@ -17,9 +17,9 @@ package top.dpdaidai.algorithm.elementary;
  */
 public class Note00_Test {
 
-    public static final int testTime = 1000;
-    public static final int maxSize = 10000;
-    public static final int maxValue = 10000;
+    public static final int testTime = 2000;
+    public static final int maxSize = 5000;
+    public static final int maxValue = 5000;
 
     public static void main(String[] args) {
 
@@ -38,12 +38,13 @@ public class Note00_Test {
 //        Note09_MergeSort note09_mergeSort = new Note09_MergeSort();
 //        Note00_Test.sortTest(note09_mergeSort);
 
-        Note12_QuickSort note12_quickSort = new Note12_QuickSort();
-        Note00_Test.sortTest(note12_quickSort);
-
-        Note13_HeapSort note13_heapSort = new Note13_HeapSort();
-        Note00_Test.sortTest(note13_heapSort);
-
+//        Note12_QuickSort note12_quickSort = new Note12_QuickSort();
+//        Note00_Test.sortTest(note12_quickSort);
+//
+//        Note13_HeapSort note13_heapSort = new Note13_HeapSort();
+//        Note00_Test.sortTest(note13_heapSort);
+        Note17_CountingSort note17_countingSort = new Note17_CountingSort();
+        Note00_Test.sortTest(note17_countingSort);
 
         //1
 //        public static final int testTime = 2000;
@@ -63,6 +64,8 @@ public class Note00_Test {
 //        平均耗时 : 0
 //        堆排序2000 次 , 耗时 : 515
 //        平均耗时 : 0
+//        计数排序2000 次 , 耗时 : 129
+//        平均耗时 : 0
 
         //2
 //        public static final int testTime = 1000;
@@ -81,6 +84,8 @@ public class Note00_Test {
 //        快速排序1000 次 , 耗时 : 962
 //        平均耗时 : 0
 //        堆排序1000 次 , 耗时 : 553
+//        平均耗时 : 0
+//        计数排序1000 次 , 耗时 : 136
 //        平均耗时 : 0
     }
 
@@ -115,8 +120,8 @@ public class Note00_Test {
 
         }
 
-        System.out.println(sortService.getName() + Note00_Test.testTime + " 次 , 耗时 : " + timeConsuming);
-        System.out.println("平均耗时 : " + timeConsuming / Note00_Test.testTime);
+        System.out.println(sortService.getName() + Note00_Test.testTime + " 次 , 耗时 : " + timeConsuming + " ms");
+        System.out.println("平均耗时 : " + timeConsuming / Note00_Test.testTime + "ms");
 
     }
 }
