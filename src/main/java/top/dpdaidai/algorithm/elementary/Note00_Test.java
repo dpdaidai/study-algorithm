@@ -50,6 +50,9 @@ public class Note00_Test {
         Note18_BucketSort note18_bucketSort = new Note18_BucketSort();
         Note00_Test.sortTest(note18_bucketSort);
 
+        Note19_RadixSort note19_radixSort = new Note19_RadixSort();
+        Note00_Test.sortTest(note19_radixSort);
+
 
         //1
 //        public static final int testTime = 2000;
@@ -73,6 +76,8 @@ public class Note00_Test {
 //        平均耗时 : 0
 //        桶排序2000 次 , 耗时 : 737 ms
 //        平均耗时 : 0ms
+//        基数排序2000 次 , 耗时 : 494 ms
+//        平均耗时 : 0ms
 
         //2
 //        public static final int testTime = 1000;
@@ -95,6 +100,8 @@ public class Note00_Test {
 //        计数排序1000 次 , 耗时 : 136
 //        平均耗时 : 0
 //        桶排序1000 次 , 耗时 : 787 ms
+//        平均耗时 : 0ms
+//        基数排序1000 次 , 耗时 : 469 ms
 //        平均耗时 : 0ms
 
     }
