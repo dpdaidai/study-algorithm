@@ -1,4 +1,4 @@
-package top.dpdaidai.algorithm.algorithms4th.chapter1.section1;
+package top.dpdaidai.algorithm.algorithms4th.chapter1.section1.exercise;
 
 /**
  * 矩阵相乘
