@@ -9,6 +9,14 @@
  * 所以许多类库的测试都使用了algs4-data中的数据 , 或者手动输入测试数据
  * 使用时通过命令行指定输入源 , 例如 : java RandomSeq 5 100.0 200.0
  
+重定向和管道
+ * ``` java RandomSeq 5 100 200  >  data.txt ``` 该符号表示将程序结果输出到某个地方
+ * ``` java Average < data.txt``` 该符号表示将后面文件的值读入 , 而不是等待用户输入
+ * ``` java RandomSeq 5 100 200  |  java Average ``` 该符号表示将 RandomSeq 的输出和 Average的输入指定为同一个流
+  
+基于文件的输入和输出
+
+
 #### 数据抽象
 
 
