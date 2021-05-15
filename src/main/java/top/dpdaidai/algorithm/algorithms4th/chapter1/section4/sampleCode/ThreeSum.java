@@ -7,6 +7,7 @@ import edu.princeton.cs.algs4.Stopwatch;
 /**
  *
  * 举例在数据量成倍增长时 , 我们能否预测程序运行时间的增加速度
+ * g(N) = N^3
  *
  * 1000个数
  * java ThreeSum 1Kints.txt
