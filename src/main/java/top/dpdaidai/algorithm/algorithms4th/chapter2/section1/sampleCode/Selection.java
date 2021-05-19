@@ -56,7 +56,8 @@ public class Selection {
     public static void main(String[] args) {
         String[] a = In.readStrings();
         sort(a);
-        assert isSorted(a);
+//        assert isSorted(a);
+        StdOut.println("isSorted : " + isSorted(a));
         show(a);
     }
 

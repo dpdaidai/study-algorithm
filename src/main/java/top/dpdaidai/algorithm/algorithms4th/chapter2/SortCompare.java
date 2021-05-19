@@ -5,6 +5,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Insertion;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Selection;
+import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Shell;
 
 /**
  *
@@ -23,7 +24,7 @@ public class SortCompare {
 //        else if (alg.equals("BinaryInsertion")) BinaryInsertion.sort(a);
         else if (alg.equals("Selection")) Selection.sort(a);
 //        else if (alg.equals("Bubble"))          Bubble.sort(a);
-//        else if (alg.equals("Shell"))           Shell.sort(a);
+        else if (alg.equals("Shell")) Shell.sort(a);
 //        else if (alg.equals("Merge"))           Merge.sort(a);
 //        else if (alg.equals("MergeX"))          MergeX.sort(a);
 //        else if (alg.equals("MergeBU"))         MergeBU.sort(a);
