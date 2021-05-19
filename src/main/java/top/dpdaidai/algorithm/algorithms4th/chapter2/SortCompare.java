@@ -6,6 +6,8 @@ import edu.princeton.cs.algs4.Stopwatch;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Insertion;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Selection;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Shell;
+import top.dpdaidai.algorithm.algorithms4th.chapter2.section2.sampleCode.Merge;
+import top.dpdaidai.algorithm.algorithms4th.chapter2.section2.sampleCode.MergeBU;
 
 /**
  *
@@ -25,9 +27,9 @@ public class SortCompare {
         else if (alg.equals("Selection")) Selection.sort(a);
 //        else if (alg.equals("Bubble"))          Bubble.sort(a);
         else if (alg.equals("Shell")) Shell.sort(a);
-//        else if (alg.equals("Merge"))           Merge.sort(a);
+        else if (alg.equals("Merge")) Merge.sort(a);
 //        else if (alg.equals("MergeX"))          MergeX.sort(a);
-//        else if (alg.equals("MergeBU"))         MergeBU.sort(a);
+        else if (alg.equals("MergeBU")) MergeBU.sort(a);
 //        else if (alg.equals("Quick"))           Quick.sort(a);
 //        else if (alg.equals("Quick3way"))       Quick3way.sort(a);
 //        else if (alg.equals("QuickX"))          QuickX.sort(a);
