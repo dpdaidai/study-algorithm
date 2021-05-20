@@ -8,6 +8,8 @@ import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Selecti
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section1.sampleCode.Shell;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section2.sampleCode.Merge;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section2.sampleCode.MergeBU;
+import top.dpdaidai.algorithm.algorithms4th.chapter2.section3.sampleCode.Quick;
+import top.dpdaidai.algorithm.algorithms4th.chapter2.section3.sampleCode.Quick3way;
 
 /**
  *
@@ -30,8 +32,8 @@ public class SortCompare {
         else if (alg.equals("Merge")) Merge.sort(a);
 //        else if (alg.equals("MergeX"))          MergeX.sort(a);
         else if (alg.equals("MergeBU")) MergeBU.sort(a);
-//        else if (alg.equals("Quick"))           Quick.sort(a);
-//        else if (alg.equals("Quick3way"))       Quick3way.sort(a);
+        else if (alg.equals("Quick")) Quick.sort(a);
+        else if (alg.equals("Quick3way"))       Quick3way.sort(a);
 //        else if (alg.equals("QuickX"))          QuickX.sort(a);
 //        else if (alg.equals("Heap"))            Heap.sort(a);
 //        else if (alg.equals("System"))          Arrays.sort(a);
