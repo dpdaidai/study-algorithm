@@ -10,6 +10,7 @@ import top.dpdaidai.algorithm.algorithms4th.chapter2.section2.sampleCode.Merge;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section2.sampleCode.MergeBU;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section3.sampleCode.Quick;
 import top.dpdaidai.algorithm.algorithms4th.chapter2.section3.sampleCode.Quick3way;
+import top.dpdaidai.algorithm.algorithms4th.chapter2.section4.sampleCode.Heap;
 
 /**
  *
@@ -33,9 +34,9 @@ public class SortCompare {
 //        else if (alg.equals("MergeX"))          MergeX.sort(a);
         else if (alg.equals("MergeBU")) MergeBU.sort(a);
         else if (alg.equals("Quick")) Quick.sort(a);
-        else if (alg.equals("Quick3way"))       Quick3way.sort(a);
+        else if (alg.equals("Quick3way")) Quick3way.sort(a);
 //        else if (alg.equals("QuickX"))          QuickX.sort(a);
-//        else if (alg.equals("Heap"))            Heap.sort(a);
+        else if (alg.equals("Heap")) Heap.sort(a);
 //        else if (alg.equals("System"))          Arrays.sort(a);
         else throw new IllegalArgumentException("Invalid algorithm: " + alg);
         return stopwatch.elapsedTime();
