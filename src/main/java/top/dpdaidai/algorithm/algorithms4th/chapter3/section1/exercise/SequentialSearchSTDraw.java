@@ -7,7 +7,7 @@ import top.dpdaidai.algorithm.algorithms4th.chapter1.section3.sampleCode.Queue;
 
 /**
  *
- * 分析 无序链表生成的符号表 , 查找和插入使用的比较次数 和 平均比较次数 . 不计算contains() , 忽略其成本
+ * 分析 无序链表生成的符号表 , 插入使用的比较次数 和 平均比较次数 . 不计算contains() , 忽略其成本
  * 1.   灰点为每次比较的次数
  * 2.   红点为平均比较的次数
  *
@@ -150,6 +150,8 @@ public class SequentialSearchSTDraw<Key, Value> {//内部类
             StdDraw.setPenColor(StdDraw.RED);
             StdDraw.point(times, sum / times);
         }
+
+        StdOut.println("sum/times : " + sum / times);
 
 
         StdOut.println("size " + st.size());
