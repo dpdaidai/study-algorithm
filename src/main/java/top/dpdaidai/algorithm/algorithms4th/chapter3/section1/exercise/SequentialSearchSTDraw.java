@@ -3,6 +3,7 @@ package top.dpdaidai.algorithm.algorithms4th.chapter3.section1.exercise;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.Stopwatch;
 import top.dpdaidai.algorithm.algorithms4th.chapter1.section3.sampleCode.Queue;
 
 /**
@@ -12,6 +13,10 @@ import top.dpdaidai.algorithm.algorithms4th.chapter1.section3.sampleCode.Queue;
  * 2.   红点为平均比较的次数
  *
  * > java SequentialSearchSTDraw 8 < tale.txt
+ * sum/times : 2244
+ * size 5126
+ * time consume : 107.561
+ * business 122
  *
  * @Author chenpantao
  * @Date 5/25/21 12:03 PM
@@ -132,6 +137,8 @@ public class SequentialSearchSTDraw<Key, Value> {//内部类
         StdDraw.setYscale(0, 5737);
         StdDraw.setPenRadius(0.005);
 
+        Stopwatch stopwatch = new Stopwatch();
+
         while (!StdIn.isEmpty()) {
             String word = StdIn.readString();
             if (word.length() < minLength) {
@@ -153,8 +160,9 @@ public class SequentialSearchSTDraw<Key, Value> {//内部类
 
         StdOut.println("sum/times : " + sum / times);
 
-
         StdOut.println("size " + st.size());
+
+        StdOut.println("time consume : " + stopwatch.elapsedTime());
 
         String max = " ";
         st.put(max, 0);

@@ -3,6 +3,7 @@ package top.dpdaidai.algorithm.algorithms4th.chapter3.section1.exercise;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.Stopwatch;
 import top.dpdaidai.algorithm.algorithms4th.chapter1.section3.sampleCode.Queue;
 
 /**
@@ -15,6 +16,7 @@ import top.dpdaidai.algorithm.algorithms4th.chapter1.section3.sampleCode.Queue;
  * > java BinarySearchSTDraw 8 < tale.txt
  * sum/times : 466
  * size 5126
+ * time consume : 129.246
  * business 122
  *
  * @Author chenpantao
@@ -113,7 +115,7 @@ public class BinarySearchSTDraw<Key extends Comparable<Key>, Value> {
         //不包含key , 则在i处插入新的键值对
         //先将大于i的值都向后挪动
         for (int j = N; j > i; j--) {
-            count ++;
+            count++;
             keys[j] = keys[j - 1];
             values[j] = values[j - 1];
         }
@@ -138,7 +140,7 @@ public class BinarySearchSTDraw<Key extends Comparable<Key>, Value> {
 
         //移动数组
         for (int i = rank; i < N - 1; i++) {
-            count ++;
+            count++;
             keys[i] = keys[i + 1];
             values[i] = values[i + 1];
         }
@@ -245,50 +247,51 @@ public class BinarySearchSTDraw<Key extends Comparable<Key>, Value> {
     }
 
     public static void main(String[] args) {
-        {
-            int minLength = Integer.parseInt(args[0]);
-            BinarySearchSTDraw<String, Integer> st = new BinarySearchSTDraw<>();
-            int sum = 0;
-            int times = 0;
-            StdDraw.setXscale(0, 14350);
-            StdDraw.setYscale(0, 5737);
-            StdDraw.setPenRadius(0.005);
+        int minLength = Integer.parseInt(args[0]);
+        BinarySearchSTDraw<String, Integer> st = new BinarySearchSTDraw<>();
+        int sum = 0;
+        int times = 0;
+        StdDraw.setXscale(0, 14350);
+        StdDraw.setYscale(0, 5737);
+        StdDraw.setPenRadius(0.005);
 
-            while (!StdIn.isEmpty()) {
-                String word = StdIn.readString();
-                if (word.length() < minLength) {
-                    continue;
-                }
-                if (!st.contains(word)) st.put(word, 1);
-                else st.put(word, st.get(word) + 1);
-                int count = st.count();
-                sum += count;
-                times++;
+        Stopwatch stopwatch = new Stopwatch();
 
-                //draw
-                StdDraw.setPenColor(StdDraw.GRAY);
-                StdDraw.point(times, count);
-                //
-                StdDraw.setPenColor(StdDraw.RED);
-                StdDraw.point(times, sum / times);
+        while (!StdIn.isEmpty()) {
+            String word = StdIn.readString();
+            if (word.length() < minLength) {
+                continue;
             }
+            if (!st.contains(word)) st.put(word, 1);
+            else st.put(word, st.get(word) + 1);
+            int count = st.count();
+            sum += count;
+            times++;
 
-            StdOut.println("sum/times : " + sum / times);
-
-
-            StdOut.println("size " + st.size());
-
-            String max = " ";
-            st.put(max, 0);
-            for (String s : st.keys()) {
-                if (st.get(s) > st.get(max)) {
-                    max = s;
-                }
-            }
-
-            StdOut.println(max + " " + st.get(max));
-
+            //draw
+            StdDraw.setPenColor(StdDraw.GRAY);
+            StdDraw.point(times, count);
+            //
+            StdDraw.setPenColor(StdDraw.RED);
+            StdDraw.point(times, sum / times);
         }
+
+        StdOut.println("sum/times : " + sum / times);
+
+        StdOut.println("size " + st.size());
+
+        StdOut.println("time consume : " + stopwatch.elapsedTime());
+
+        String max = " ";
+        st.put(max, 0);
+        for (String s : st.keys()) {
+            if (st.get(s) > st.get(max)) {
+                max = s;
+            }
+        }
+
+        StdOut.println(max + " " + st.get(max));
+
 
     }
 
